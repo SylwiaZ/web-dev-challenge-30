@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -402,6 +403,66 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'icons';
+  src: url("../font/icons.eot?11897924");
+  src: url("../font/icons.eot?11897924#iefix") format("embedded-opentype"), url("../font/icons.woff2?11897924") format("woff2"), url("../font/icons.woff?11897924") format("woff"), url("../font/icons.ttf?11897924") format("truetype"), url("../font/icons.svg?11897924#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icons';
+    src: url('../font/icons.svg?11897924#icons') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-twitter:before {
+  content: '\f099'; }
+
+/* '' */
+.icon-youtube:before {
+  content: '\f16a'; }
+
+/* '' */
+.icon-instagram:before {
+  content: '\f16d'; }
+
+/* '' */
+.icon-facebook:before {
+  content: '\f308'; }
+
+/* '' */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -434,90 +495,230 @@ h2 {
   color: #444444;
   text-transform: uppercase; }
 
+h3 {
+  font-size: 18px;
+  font-weight: 700; }
+
+h4 {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #290a59;
+  letter-spacing: 6px;
+  line-height: 1.5; }
+
 button {
   background-color: transparent;
   outline: none; }
 
-header {
+header .nav-bar {
+  padding: 70px 0 80px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0px 1px 8px; }
+
+header ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  header ul h1 a {
+    font-size: inherit;
+    letter-spacing: 10px;
+    line-height: 1; }
+  header ul a {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 4px;
+    line-height: 3;
+    display: inline-block;
+    padding: 0 10px; }
+  header ul li {
+    margin: 0 15px; }
+    header ul li:hover a {
+      background-color: #efeee9;
+      border-radius: 6px; }
+    header ul li:hover h1 a {
+      background-color: transparent;
+      border-radius: 0; }
+
+#banner {
   background: url("../img/header_background.jpg") center center no-repeat;
   background-size: cover;
-  height: 100vh;
-  position: relative; }
-  header .nav-bar {
-    padding: 70px 0 80px 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    position: fixed;
-    z-index: 100;
-    width: 100%; }
-  header ul {
-    margin: 0;
-    list-style: none;
+  height: 100vh; }
+  #banner .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    header ul h1 a {
-      font-size: inherit;
-      letter-spacing: 10px;
-      line-height: 1; }
-    header ul a {
-      text-transform: uppercase;
-      font-size: 10px;
-      letter-spacing: 4px;
-      line-height: 3;
-      display: inline-block;
-      padding: 0 10px; }
-    header ul li {
-      margin: 0 15px; }
-      header ul li:hover a {
-        background-color: #efeee9;
-        border-radius: 6px; }
-      header ul li:hover h1 a {
-        background-color: transparent;
-        border-radius: 0; }
-  header .banner-text {
-    width: 550px;
-    text-align: right;
-    position: absolute;
-    bottom: 100px;
-    right: 415px; }
-    header .banner-text p {
-      font-size: 24px;
-      font-weight: 300; }
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: inherit;
+    padding-bottom: 100px; }
+  #banner p {
+    font-size: 24px;
+    font-weight: 300;
+    max-width: 550px;
+    text-align: right; }
 
-.portfolio-project {
+#portfolio-project {
   padding: 186px 0; }
-  .portfolio-project article {
+  #portfolio-project article {
     background-color: #ffffff;
     padding: 95px 190px 230px 190px;
     position: relative; }
-    .portfolio-project article h2 {
+    #portfolio-project article h2 {
       margin-bottom: 70px;
       text-align: center; }
-    .portfolio-project article p {
+    #portfolio-project article p {
       font-size: 20px;
       font-weight: 300;
       line-height: 1.4; }
-    .portfolio-project article button {
+    #portfolio-project article button {
       border: 2px solid #222222;
       position: absolute;
       left: calc(50% - 105px);
       bottom: 108px; }
-      .portfolio-project article button a {
+      #portfolio-project article button a {
         font-size: 18px;
         font-weight: 700;
         text-transform: uppercase;
         display: block;
         padding: 17px 32px 17px 32px; }
-      .portfolio-project article button:hover {
+      #portfolio-project article button:hover {
         background-color: #efeee9; }
 
-.portfolio-gallery {
+#portfolio-gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
-  .portfolio-gallery a {
+  #portfolio-gallery a {
     flex: 33.333333%;
-    display: block; }
-  .portfolio-gallery img {
+    display: block;
+    position: relative; }
+    #portfolio-gallery a:after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; }
+    #portfolio-gallery a:hover:after {
+      opacity: 1; }
+    #portfolio-gallery a:hover span {
+      display: block; }
+    #portfolio-gallery a span {
+      font-weight: 300;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #fefefe;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      z-index: 2; }
+  #portfolio-gallery img {
     display: block;
     width: 100%; }
+
+#quotation blockquote {
+  padding: 212px 160px; }
+  #quotation blockquote p {
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center; }
+
+#about {
+  display: flex;
+  flex-direction: row; }
+  #about .about-photo {
+    flex: 50%; }
+    #about .about-photo img {
+      display: block;
+      width: 100%; }
+  #about .about-info {
+    flex: 50%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 129px; }
+    #about .about-info .item {
+      flex-basis: 16%;
+      width: 33.333333%; }
+      #about .about-info .item p {
+        color: #6d6081;
+        font-size: 14px;
+        line-height: 1.6; }
+
+#articles .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0; }
+
+#articles .article-box {
+  width: 350px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 38px 50px; }
+  #articles .article-box p {
+    font-weight: 300;
+    margin: 40px 0; }
+  #articles .article-box a {
+    color: #4eaeff; }
+    #articles .article-box a:hover {
+      text-decoration: underline; }
+
+#contact {
+  background-color: #353535; }
+  #contact .container {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300; }
+  #contact .contact-data {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #contact .contact-data p {
+      font-weight: 300;
+      line-height: 1.5; }
+    #contact .contact-data .data-group {
+      margin-top: 20px; }
+      #contact .contact-data .data-group span {
+        display: block;
+        font-weight: 700;
+        line-height: 1.8; }
+      #contact .contact-data .data-group a {
+        color: #ffffff; }
+  #contact .contact-map {
+    height: 460px;
+    width: 48%; }
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  color: #353535;
+  padding: 50px 0; }
+  footer .container ul {
+    width: 185px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none; }
+    footer .container ul a {
+      display: block; }
+
+footer .socials {
+  display: flex; }
+  footer .socials i {
+    font-size: 24px; }
+
+footer span {
+  font-size: 20px;
+  font-weight: 300; }

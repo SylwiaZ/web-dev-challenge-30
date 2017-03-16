@@ -1,0 +1,48 @@
+{
+  "name": "icons",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 61593,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4743b088aa95d6f3b6b990e770d3b647",
+      "css": "facebook",
+      "code": 62216,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
+      "css": "instagram",
+      "code": 61805,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "47a1f80457068fbeab69fdb83d7d0817",
+      "css": "youtube",
+      "code": 61802,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "61aed0f35a186afc0eea2d61321569ca",
+      "css": "youtube",
+      "code": 59404,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M1437.3 189.1C1423.6 84.5 1355.5 0 1255.5 0H199.1C99.1 0 32.3 85.5 17.3 189.1A1760.5 1760.5 0 0 0 0 482.7 2636.4 2636.4 0 0 0 17.3 811.4C35.9 916.8 99.1 1000.5 199.1 1000.5H1255.5C1355.5 1000.5 1419.5 920 1437.3 811.4A1760.5 1760.5 0 0 0 1454.5 517.3 2636.4 2636.4 0 0 0 1437.3 189.1ZM904.5 545.5L599.1 727.3A53.6 53.6 0 0 1 520.9 681.8V320.5A53.6 53.6 0 0 1 599.1 275L904.5 454.5A53.6 53.6 0 0 1 904.5 545.5Z",
+        "width": 1455
+      },
+      "search": [
+        "youtube"
+      ]
+    }
+  ]
+}
