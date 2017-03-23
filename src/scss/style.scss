@@ -7,6 +7,10 @@ $font-size-bigger: 24px;
 $base-font-color: #222222;
 $font-light: 300;
 $font-thin: 100;
+$breakpoint-1: 1140px;
+$breakpoint-2: 992px;
+$breakpoint-3: 767px;
+$breakpoint-4: 480px;
 
 * {
     box-sizing: border-box;
@@ -25,6 +29,18 @@ body {
 .container {
     width: 1110px;
     margin: 0 auto;
+    @media (max-width: $breakpoint-1) {
+        width: 960px;
+    }
+    @media (max-width: $breakpoint-2) {
+        width: 738px;
+    }
+    @media (max-width: $breakpoint-3) {
+        width: 450px;
+    }
+    @media (max-width: $breakpoint-4) {
+        width: 100%;
+    }
 }
 
 a {
@@ -150,6 +166,10 @@ header {
             font-size: 20px;
             font-weight: $font-light;
             line-height: 1.4;
+
+            @media (max-width: $breakpoint-1) {
+                text-align: center;
+            }
         }
 
         button {
@@ -166,6 +186,9 @@ header {
             }
             &:hover {
                 background-color: #efeee9;
+                a {
+                    color: #4eaeff; 
+                }
             }
         }
     } 
@@ -175,10 +198,25 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @media (max-width: $breakpoint-3) {
+        margin: 0 50px;
+    }
+    @media (max-width: $breakpoint-4) {
+        margin: 0;
+    }
     a {
         flex: 33.333333%;
         display: block;
         position: relative;
+
+        @media (max-width: $breakpoint-2) {
+            flex: 50%; 
+        }
+        @media (max-width: $breakpoint-3) {
+            flex: 100%;
+            margin-bottom: 30px;
+        }
+
         &:after {
             content: '';
             display: block;
@@ -232,22 +270,20 @@ header {
     flex-direction: row;
     .about-photo{
         flex: 50%;
-        img {
-            display: block;
-            width: 100%;
-        }
+        background: url("../img/about_photo.jpg") center center no-repeat;
+        background-size: cover;
     }
 
     .about-info {
         flex: 50%;
         background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 129px;
+        padding: 8%;
         .item {
-            flex-basis: 16%;
-            width: 33.333333%;
+            width: 300px;
+            margin-bottom: 44px;
+            &:last-child {
+                margin-bottom: 0;
+            }
             p {
                 color: #6d6081;
                 font-size: 14px;
@@ -263,13 +299,22 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 100px 0;
+
+        @media (max-width: $breakpoint-2) {
+            flex-direction: column;
+        }
     }
 
     .article-box {
-        width: 350px;
+        width: calc(33.33333% - 19px);
         background-color: #ffffff;
         text-align: center;
         padding: 38px 50px;
+
+        @media (max-width: $breakpoint-2) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
         p {
             font-weight: $font-light;
@@ -337,6 +382,9 @@ footer {
             list-style: none;
             a {
                 display: block;
+                &:hover i {
+                    color: #4eaeff;
+                }
             }
         }
     }
