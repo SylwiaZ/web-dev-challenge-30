@@ -33,14 +33,14 @@ body {
         width: 960px;
     }
     @media (max-width: $breakpoint-2) {
-        width: 738px;
+        width: 736px;
     }
     @media (max-width: $breakpoint-3) {
-        width: 450px;
-    }
-    @media (max-width: $breakpoint-4) {
         width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
+
 }
 
 a {
@@ -82,14 +82,47 @@ button {
 }
 
 header {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0px 1px 8px;
 
     .nav-bar {
         padding: 70px 0 80px 0;
-        background-color: rgba(255, 255, 255, 0.7);
-        position: fixed;
-        z-index: 100;
-        width: 100%;
-        box-shadow: 0px 1px 8px;
+        @media (max-width: $breakpoint-3) {
+            display: none;
+        }
+    }
+
+    .nav-bar-rwd {
+        display: none;
+        padding: 70px 0 80px 0;
+        @media (max-width: $breakpoint-3) {
+            display: block;
+        }
+
+        .hamburger {
+            height: 27px;
+            width: 40px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            
+            span {
+                display: block;
+                
+            }
+        }
+    }
+
+
+    h1 {
+        a {
+            font-size: inherit;
+            letter-spacing: 10px;
+            line-height: 1; 
+        }
     }
 
     ul {
@@ -98,34 +131,28 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
 
-        h1 a {
-            font-size: inherit;
-            letter-spacing: 10px;
-            line-height: 1;
+    li {
+        margin: 0 15px;
+        &:hover a {
+            background-color: #efeee9;
+            border-radius: 6px;
         }
 
-        a {
-            text-transform: uppercase;
-            font-size: 10px;
-            letter-spacing: 4px;
-            line-height: 3;
-            display: inline-block;
-            padding: 0 10px;
+        &:hover h1 a {
+            background-color: transparent;
+            border-radius: 0;
         }
+    }
 
-        li {
-            margin: 0 15px;
-            &:hover a {
-                background-color: #efeee9;
-                border-radius: 6px;
-            }
-
-            &:hover h1 a {
-                background-color: transparent;
-                border-radius: 0;
-            }
-        }
+    a {
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 4px;
+        line-height: 3;
+        display: inline-block;
+        padding: 0 10px;
     }
 }
 
@@ -145,6 +172,14 @@ header {
         font-weight: $font-light;
         max-width: 550px;
         text-align: right;
+
+        @media (max-width: $breakpoint-3) {
+            font-size: 22px;
+            text-align: center;
+        }
+        @media (max-width: $breakpoint-4) {
+            font-size: 20px;
+        }
     }
 }
 
@@ -152,14 +187,40 @@ header {
 #portfolio-project {
     padding: 186px 0;
 
+    @media (max-width: $breakpoint-1) {
+        padding: 125px 0;
+    }
+    @media (max-width: $breakpoint-2) {
+        padding: 80px 15px;
+    }
+
     article {
         background-color: #ffffff;
-        padding: 95px 190px 230px 190px;
+        padding: 95px 190px 110px 190px;
         position: relative;
+
+        @media (max-width: $breakpoint-1) {
+            padding: 95px 100px 110px 100px;
+        }
+
+        @media (max-width: $breakpoint-2) {
+            padding: 70px 80px 70px 80px;
+        }
+        @media (max-width: $breakpoint-3) {
+            width: 100%;
+        }
+        @media (max-width: $breakpoint-4) {
+            width: 100%;
+            padding: 50px 30px;
+        }
 
         h2 {
             margin-bottom: 70px;
             text-align: center;
+            @media (max-width: $breakpoint-2) {
+                margin-bottom: 45px;
+                font-size: 37px;
+            }
         }
 
         p {
@@ -172,25 +233,27 @@ header {
             }
         }
 
-        button {
-            border: 2px solid #222222;
-            position: absolute;
-            left: calc(50% - 105px);
-            bottom: 108px;
-            a {
-                font-size: 18px;
-                font-weight: 700;
-                text-transform: uppercase;
-                display: block;
-                padding: 17px 32px 17px 32px;
-            }
-            &:hover {
-                background-color: #efeee9;
-                a {
-                    color: #4eaeff; 
-                }
+        .see-more {
+            text-align: center;
+            margin-top: 63px;
+            @media (max-width: $breakpoint-2) {
+                margin-top: 45px;
             }
         }
+
+        a {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid #222222;
+            display: inline-block;
+            padding: 17px 37px;
+            &:hover {
+                background-color: #efeee9;
+            }
+        }
+
+
     } 
 }
 
@@ -198,11 +261,15 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @media (max-width: $breakpoint-2) {
+        padding: 0 15px;
+    }
     @media (max-width: $breakpoint-3) {
-        margin: 0 50px;
+        padding: 0 50px;
     }
     @media (max-width: $breakpoint-4) {
-        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     a {
         flex: 33.333333%;
@@ -256,11 +323,28 @@ header {
 #quotation {
     blockquote {
         padding: 212px 160px;
+        @media (max-width: $breakpoint-1) {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        @media (max-width: $breakpoint-2) {
+            padding: 150px 100px;
+        }
+        @media (max-width: $breakpoint-3) {
+            padding: 100px 70px;
+        }
+        @media (max-width: $breakpoint-3) {
+            padding: 75px 50px;
+        }
+
         p {
             font-size: 36px;
             font-weight: $font-thin;
             line-height: 1.2;
             text-align: center;
+            @media (max-width: $breakpoint-3) {
+                font-size: 30px;
+            }
         } 
     }
 }
@@ -268,16 +352,27 @@ header {
 #about {
     display: flex;
     flex-direction: row;
+    @media (max-width: $breakpoint-2) {
+        flex-direction: column;
+    }
     .about-photo{
         flex: 50%;
         background: url("../img/about_photo.jpg") center center no-repeat;
         background-size: cover;
+        min-height: 400px;
     }
 
     .about-info {
         flex: 50%;
         background-color: #ffffff;
         padding: 8%;
+        @media (max-width: $breakpoint-2) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 15px;
+        }
         .item {
             width: 300px;
             margin-bottom: 44px;
@@ -302,6 +397,11 @@ header {
 
         @media (max-width: $breakpoint-2) {
             flex-direction: column;
+            padding: 100px 15px;
+        }
+        @media (max-width: $breakpoint-4) {
+            flex-direction: column;
+            padding: 80px 15px;
         }
     }
 
@@ -338,6 +438,13 @@ header {
         display: flex;
         justify-content: space-between;
         font-weight: $font-light;
+        @media (max-width: $breakpoint-2) {
+            padding: 100px 0;
+            flex-direction: column;
+        }
+        @media (max-width: $breakpoint-3) {
+            padding: 80px 15px 60px 15px;
+        }
     }
 
     .contact-data {
@@ -345,27 +452,51 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media (max-width: $breakpoint-2) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
         p {
             font-weight: $font-light;
             line-height: 1.5;
         }
-        .data-group {
-            margin-top: 20px;
-            span {
-                display: block;
-                font-weight: 700;
-                line-height: 1.8;
+        .data {
+            @media (max-width: $breakpoint-2) {
+                display: flex;
+                justify-content: space-around;
+            }
+            @media (max-width: $breakpoint-4) {
+                flex-direction: column;
+            }
+            .data-group {
+                margin-top: 20px;
+                span {
+                    display: block;
+                    font-weight: 700;
+                    line-height: 1.8;
+                }
+
+                a {
+                    color: #ffffff;
+                }
             }
 
-            a {
-                color: #ffffff;
-            }
         }
     }
 
     .contact-map {
         height: 460px;
         width: 48%;
+        @media (max-width: $breakpoint-2) {
+            width: 80%;
+            left: 50%;
+            transform: translate(-50%);
+
+        }
+        @media (max-width: $breakpoint-3) {
+            width: 100%;
+        }
     }
 }
 
@@ -374,25 +505,34 @@ footer {
         display: flex;
         justify-content: space-between;
         color: #353535;
-        padding: 50px 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @media (max-width: $breakpoint-4) {
+            flex-direction: column;
+            text-align: center;
+        }
         ul {
-            width: 185px;
-            display: flex;
-            justify-content: space-between;
             list-style: none;
+            @media (max-width: $breakpoint-4) {
+                margin-bottom: 20px;
+            }
             a {
                 display: block;
                 &:hover i {
                     color: #4eaeff;
                 }
             }
-        }
-    }
+            li {
+                display: inline-block;
+                margin-right: 12px;
+                &:last-child {
+                    margin-right: 0; 
+                }
+                i {
+                    font-size: 24px;
+                }
 
-    .socials {
-        display: flex;
-        i {
-            font-size: 24px;
+            }
         }
     }
 

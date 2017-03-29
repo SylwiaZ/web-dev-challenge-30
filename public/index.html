@@ -12,17 +12,23 @@
 
     <body>
         <header>
-            <nav class="nav-bar">
-                <ul class="container">
-                    <li> <a href="">portfolio</a> </li>
-                    <li> <a href="">about</a> </li>
-                    <li>
-                        <h1><a href="">moonspeak</a></h1> 
-                    </li>
-                    <li> <a href="">articles</a> </li>
-                    <li> <a href="">contact</a> </li>
-                </ul>
-            </nav>
+            <div class="container">
+                <nav class="nav-bar">
+                    <ul>
+                        <li> <a href="">portfolio</a> </li>
+                        <li> <a href="">about</a> </li>
+                        <li>
+                            <h1><a href="">moonspeak</a></h1> 
+                        </li>
+                        <li> <a href="">articles</a> </li>
+                        <li> <a href="">contact</a> </li>
+                    </ul>
+                </nav>
+                <nav class="nav-bar-rwd">
+                    <h1><a href="">moonspeak</a></h1> 
+                    <button type="button" class="hamburger"><span></span></button>
+                </nav>
+            </div>
         </header>
         <main>
             <section id="banner">
@@ -34,9 +40,9 @@
                 <article class="container">
                     <h2>Lorem ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button type="button">
-                        <a href="">View project</a>
-                    </button>
+                    <div class="see-more">
+                        <a href="">View project</a> 
+                    </div>
                 </article>
             </section>
             <section id="portfolio-gallery">
@@ -111,13 +117,15 @@
                 <div class="container">
                     <div class="contact-data">
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                        <div class="data-group">
-                            <span>Phone number</span>
-                            <a href="tel:40770123456">+40 770 123 456</a> 
-                        </div>
-                        <div class="data-group">
-                            <span>Email</span>
-                            <a href="mailto:almaz@isenbaev.com">almaz@isenbaev.com</a>
+                        <div class="data">
+                            <div class="data-group">
+                                <span>Phone number</span>
+                                <a href="tel:40770123456">+40 770 123 456</a> 
+                            </div>
+                            <div class="data-group">
+                                <span>Email</span>
+                                <a href="mailto:almaz@isenbaev.com">almaz@isenbaev.com</a>
+                            </div>
                         </div>
                     </div>
                     <div class="contact-map">
@@ -128,7 +136,7 @@
         </main>
         <footer>
             <div class="container">
-                <ul class="socials">
+                <ul>
                     <li>
                         <a href=""><i class="icon-twitter"></i></a>
                     </li>
