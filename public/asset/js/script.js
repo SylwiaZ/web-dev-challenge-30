@@ -10,3 +10,13 @@ function initMap() {
         zoomControl: false
     });
 }
+
+$(document).ready(function(){
+    
+    $('.nav-bar-rwd .hamburger').click(function() {
+        $(this).parents('.nav-bar-rwd').toggleClass('open');
+    })
+    
+}); 
+                  
+                  
