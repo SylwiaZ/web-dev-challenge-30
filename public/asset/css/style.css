@@ -593,32 +593,31 @@ header {
       padding-bottom: 0; }
       header .nav-bar-rwd.open .mobile-menu {
         display: block; }
+      header .nav-bar-rwd.open .hamburger {
+        border: 0; }
+        header .nav-bar-rwd.open .hamburger:before {
+          transform: translateY(7px) rotate(45deg); }
+        header .nav-bar-rwd.open .hamburger:after {
+          transform: translateY(7px) rotate(-45deg); }
     header .nav-bar-rwd .hamburger {
+      height: 26px;
+      width: 36px;
       cursor: pointer;
-      border: none;
-      outline: none; }
-      header .nav-bar-rwd .hamburger span {
-        display: block;
-        height: 3px;
-        width: 30px;
-        background-color: #222222;
-        position: relative; }
-        header .nav-bar-rwd .hamburger span:before {
-          content: '';
-          display: block;
-          height: 3px;
-          width: 30px;
-          background-color: #222222;
-          position: absolute;
-          top: -7px; }
-        header .nav-bar-rwd .hamburger span:after {
-          content: '';
-          display: block;
-          height: 3px;
-          width: 30px;
-          background-color: #222222;
-          position: absolute;
-          top: 7px; }
+      outline: none;
+      border: 0;
+      border-top: 4px solid #222222;
+      position: relative; }
+      header .nav-bar-rwd .hamburger:before, header .nav-bar-rwd .hamburger:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-top: 4px solid #222222; }
+      header .nav-bar-rwd .hamburger:before {
+        transform: translateY(7px); }
+      header .nav-bar-rwd .hamburger:after {
+        transform: translateY(18px); }
 
 #banner {
   background: url("../img/header_background.jpg") center center no-repeat;

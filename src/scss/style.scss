@@ -178,44 +178,51 @@ header {
                 }
             }
         }
-        
+
         &.open {
             padding-bottom: 0;
             .mobile-menu {
                 display: block;
             }
-            
+
+            .hamburger {
+                border: 0;
+
+                &:before {
+                    transform: translateY(7px) rotate(45deg);
+                }
+
+                &:after {
+                    transform: translateY(7px) rotate(-45deg);
+                }
+            }
+
         }
 
         .hamburger {
+            height: 26px;
+            width: 36px;
             cursor: pointer;
-            border: none;
             outline: none;
+            border: 0;
+            border-top: 4px solid #222222;
+            position: relative;
 
-            span {
-                display: block;
-                height: 3px;
-                width: 30px;
-                background-color: #222222; 
-                position: relative;
-                &:before {
-                    content: '';
-                    display: block;
-                    height: 3px;
-                    width: 30px;
-                    background-color: #222222;
-                    position: absolute;
-                    top: -7px;
-                }
-                &:after {
-                    content: '';
-                    display: block;
-                    height: 3px;
-                    width: 30px;
-                    background-color: #222222;
-                    position: absolute;
-                    top: 7px; 
-                }
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                border-top: 4px solid #222222;
+            }
+
+            &:before {
+                transform: translateY(7px);
+            }
+
+            &:after {
+                transform: translateY(18px);
             }
         }
     }
