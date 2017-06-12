@@ -1,0 +1,72 @@
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-2) {
+        padding: 0 15px;
+    }
+
+    @media (max-width: $breakpoint-3) {
+        padding: 0 50px;
+    }
+
+    @media (max-width: $breakpoint-4) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .link {
+        flex: 33.333333%;
+        display: block;
+        position: relative;
+
+        @media (max-width: $breakpoint-2) {
+            flex: 50%; 
+        }
+
+        @media (max-width: $breakpoint-3) {
+            flex: 100%;
+            margin-bottom: 30px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s linear;
+        }
+
+        &:hover:after {
+            opacity: 1;
+        }
+
+        &:hover .inscription {
+            display: block;
+        }
+
+        .inscription {
+            font-weight: $font-light;
+            font-size: $font-size-bigger;
+            text-transform: uppercase;
+            color: #fefefe;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            z-index: 2;
+        }
+    }
+
+    .photo {
+        display: block;
+        width: 100%;
+    }
+}

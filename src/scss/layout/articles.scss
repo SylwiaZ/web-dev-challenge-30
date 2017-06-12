@@ -1,0 +1,47 @@
+.articles {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+
+        @media (max-width: $breakpoint-2) {
+            flex-direction: column;
+            padding: 100px 15px;
+        }
+
+        @media (max-width: $breakpoint-3) {
+            flex-direction: column;
+            padding: 60px 15px;
+        }
+    }
+
+    .article-box {
+        width: calc(33.33333% - 19px);
+        background-color: #ffffff;
+        text-align: center;
+        padding: 38px 50px;
+
+        @media (max-width: $breakpoint-2) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .headline-3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .text {
+            font-weight: $font-light;
+            margin: 40px 0;
+        }
+
+        .link {
+            color: #4eaeff;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

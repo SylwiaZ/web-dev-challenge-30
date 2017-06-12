@@ -1,0 +1,78 @@
+.project {
+    padding: 186px 0;
+
+    @media (max-width: $breakpoint-1) {
+        padding: 125px 0;
+    }
+    @media (max-width: $breakpoint-2) {
+        padding: 80px 15px;
+    }
+
+    .container {
+        background-color: #ffffff;
+        padding: 95px 190px 110px 190px;
+        position: relative;
+
+        @media (max-width: $breakpoint-1) {
+            padding: 95px 100px 110px 100px;
+        }
+
+        @media (max-width: $breakpoint-2) {
+            padding: 70px 80px 70px 80px;
+        }
+
+        @media (max-width: $breakpoint-3) {
+            width: 100%;
+        }
+
+        @media (max-width: $breakpoint-4) {
+            width: 100%;
+            padding: 50px 30px;
+        }
+
+        .headline-2 {
+            margin-bottom: 70px;
+            text-align: center;
+
+            @media (max-width: $breakpoint-2) {
+                margin-bottom: 45px;
+                font-size: 37px;
+            }
+        }
+
+        .text {
+            font-size: 20px;
+            font-weight: $font-light;
+            line-height: 1.4;
+
+            @media (max-width: $breakpoint-1) {
+                text-align: center;
+            }
+        }
+
+        .see-more {
+            text-align: center;
+            margin-top: 63px;
+
+            @media (max-width: $breakpoint-2) {
+                margin-top: 45px;
+            }
+        }
+
+        .link {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid #222222;
+            display: inline-block;
+            padding: 17px 37px;
+            transition: all 0.2s linear;
+
+            &:hover {
+                color: #4eaeff;
+                border: 2px solid #4eaeff;
+                transition: all 0.2s linear;
+            }
+        }
+    } 
+}

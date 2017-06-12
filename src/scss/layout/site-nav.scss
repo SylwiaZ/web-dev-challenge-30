@@ -1,0 +1,163 @@
+.site-nav {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0px 1px 8px;
+
+    h1 {
+        a {
+            font-size: inherit;
+            letter-spacing: 10px;
+            line-height: 1.4; 
+        }
+    }
+
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+
+    a {
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 4px;
+        line-height: 3;
+        display: inline-block;
+    }
+
+    .nav-bar {
+        padding: 67px 0 80px 0;
+
+        &.small {
+            padding: 30px 0 35px 0;
+        }
+
+        @media (max-width: $breakpoint-2) {
+            padding: 50px 0 60px 0; 
+        }
+
+        @media (max-width: $breakpoint-3) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        li {
+            margin: 0 15px;
+
+            &:hover a {
+                color: #4eaeff;
+                transition: all 0.2s linear;
+            }
+
+            &:hover h1 a {
+                color: #222222;
+            }
+
+            &.active {
+                background-color: #efeee9; 
+                &:hover a {
+                    color: #222222;
+                }
+            }
+        }
+
+        a {
+            padding: 0 10px;
+        }
+    }
+
+    .nav-bar-rwd {
+        display: none;
+        padding: 70px 0 0 0;
+
+        @media (max-width: $breakpoint-3) {
+            display: block;
+            padding: 20px 0;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mobile-menu {
+            margin-top: 20px;
+            flex-direction: column;
+            background-color: rgba(239, 238, 233, 0.7);
+            border-top: 1px solid #dedddb;
+            display: none;
+        }
+
+        li {
+            text-align: center;
+            border-bottom: 1px solid #dedddb;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                display: block;
+                line-height: 5;
+                &:hover {
+                    color:#4eaeff;
+                }
+            }
+        }
+
+        &.open {
+            padding-bottom: 0;
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hamburger {
+                border: 0;
+
+                &:before {
+                    transform: translateY(10px) rotate(45deg);
+                }
+
+                &:after {
+                    transform: translateY(10px) rotate(-45deg);
+                }
+            }
+
+        }
+
+        .hamburger {
+            height: 24px;
+            width: 30px;
+            cursor: pointer;
+            border: 0;
+            border-top: 4px solid #222222;
+            background-color: transparent;
+            position: relative;
+            margin-top: 4px;
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                border-top: 4px solid #222222;
+            }
+
+            &:before {
+                transform: translateY(6px);
+            }
+
+            &:after {
+                transform: translateY(16px);
+            }
+        }
+    }
+}

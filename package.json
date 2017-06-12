@@ -1,7 +1,10 @@
 {
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "grunt": "^1.0.1",
+    "grunt-combine-media-queries": "^1.0.20",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.0.0",
     "jit-grunt": "^0.10.0"
   }
