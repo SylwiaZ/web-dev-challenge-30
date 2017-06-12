@@ -10,6 +10,32 @@ body {
     font-weight: 400;
     color: $base-font-color;
     background-color: #efeee9;
+
+    &.open {
+        overflow-y: hidden;
+        
+        .nav-bar-rwd {
+            .mobile-menu {
+                height: calc(100% - 73px);
+                width: 100%;
+                position: fixed;
+                display: block;
+                overflow-y: auto;
+            }
+
+            .hamburger {
+                border: 0;
+
+                &:before {
+                    transform: translateY(10px) rotate(45deg);
+                }
+
+                &:after {
+                    transform: translateY(10px) rotate(-45deg);
+                }
+            }
+        }
+    }
 }
 
 .container {
