@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function handleWindowScroll() {
     $(window).scroll(function() {
-        /*Przyklejenie nawigacji*/
+        /* Przyklejenie nawigacji */
         var top = $(window).scrollTop();
         var find_class_small = $.contains('.nav-bar', '.small');
 
@@ -19,7 +19,7 @@ function handleWindowScroll() {
 }
 
 function handleNavigation() {
-    /*Rozwijanie mobilnej nawigacji*/
+    /* Rozwijanie mobilnej nawigacji */
     $('.nav-bar-rwd .hamburger').click(function() {
         $('body').toggleClass('open');
     });
@@ -42,7 +42,7 @@ function handleNavigation() {
 
 function initMap() {
     'use strict';
-    // Create a map object and specify the DOM element for display.
+    /* Create a map object and specify the DOM element for display */
     var map = new google.maps.Map(document.getElementsByClassName('contact-map')[0], {
         center: {lat: 50.055389, lng: 19.935309},
         scrollwheel: false,
